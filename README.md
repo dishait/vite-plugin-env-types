@@ -26,7 +26,7 @@ export default defineConfig({
 });
 ```
 
-```json
+```json5
 // tsconfig.json
 {
     "include": ["./env.d.ts"] // Ensure that files are scanned
