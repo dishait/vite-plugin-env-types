@@ -1,0 +1,68 @@
+{
+  "version": "0.0.0",
+  "name": "name",
+  "description": "description",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/name/repo.git"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "build": "unbuild",
+    "build:deno": "udeno",
+    "build:esm": "mkdist -d",
+    "dev": "pnpm build:stub",
+    "play": "tsx src/index.ts",
+    "prepare": "husky install",
+    "test:watch": "vitest --watch",
+    "coverage": "vitest --coverage",
+    "prepublishOnly": "pnpm build",
+    "build:stub": "pnpm build --stub",
+    "build:cjs": "mkdist -d --format=cjs",
+    "deps:fresh:major": "npx taze major -w",
+    "deps:fresh:minor": "npx taze minor -w",
+    "deps:fresh:patch": "npx taze patch -w",
+    "release": "bumpp --commit --push --tag && npm publish"
+  },
+  "keywords": [
+    "lib",
+    "tool",
+    "node",
+    "utils"
+  ],
+  "author": {
+    "name": "name",
+    "email": "xx@xx.com",
+    "url": "https://github.com/name"
+  },
+  "bugs": {
+    "email": "xx@xx.com",
+    "url": "https://github.com/name/repo/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "bumpp": "^9.1.0",
+    "c8": "^7.13.0",
+    "husky": "^8.0.3",
+    "mkdist": "^1.2.0",
+    "tsx": "^3.12.6",
+    "typescript": "^5.0.3",
+    "udeno": "^0.3.6",
+    "unbuild": "^1.2.0",
+    "vitest": "^0.29.8"
+  }
+}
