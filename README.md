@@ -2,6 +2,8 @@
 
 Automatically generate env type
 
+<br />
+
 ## Usage
 
 ### install
@@ -9,6 +11,8 @@ Automatically generate env type
 ```shell
 npm i vite-plugin-env-types -D
 ```
+
+<br />
 
 ### config
 
@@ -32,6 +36,8 @@ export default defineConfig({
     "include": ["./env.d.ts"] // Ensure that files are scanned
 }
 ```
+
+<br />
 
 ## License
 
