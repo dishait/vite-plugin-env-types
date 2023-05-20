@@ -4,6 +4,13 @@ Automatically generate env type
 
 <br />
 
+
+## Motivation
+
+Want to automatically get prompted for `import.meta.env` instead of managing it manually 👉 [vitejs.dev/guide/env-and-mode](https://vitejs.dev/guide/env-and-mode.html#intellisense-for-typescript)
+
+<br />
+
 ## Usage
 
 ### install

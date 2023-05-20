@@ -5,6 +5,7 @@ import { writeFile } from "fs/promises";
 
 interface Options {
   /**
+   * Write file location
    * @default "env.d.ts"
    */
   dts?: string;
