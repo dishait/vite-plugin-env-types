@@ -21,8 +21,8 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "dev": "unbuild --stub",
     "prepublishOnly": "pnpm build",
+    "dev": "unbuild --stub && pnpm -C example dev",
     "release": "bumpp --commit --push --tag && npm publish"
   },
   "keywords": [
@@ -52,5 +52,8 @@
   },
   "peerDependencies": {
     "vite": ">=2.0.0"
+  },
+  "dependencies": {
+    "fast-glob": "^3.2.12"
   }
 }
